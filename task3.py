@@ -86,12 +86,21 @@ class Circle(Shape):
         return f"Circle(r={self._radius})"
 
 
+def compare_values(val1: float, val2: float, equal_str: str) -> str:
+    if val1 > val2:
+        return "больше"
+    elif val1 < val2:
+        return "меньше"
+    else:
+        return equal_str
+
+
 def compare_shapes(shape1: Shape, shape2: Shape) -> None:
     area1, area2 = shape1.area(), shape2.area()
     perimeter1, perimeter2 = shape1.perimeter(), shape2.perimeter()
     
-    area_comparison = "больше" if area1 > area2 else "меньше" if area1 < area2 else "равна"
-    perimeter_comparison = "больше" if perimeter1 > perimeter2 else "меньше" if perimeter1 < perimeter2 else "равен"
+    area_comparison = compare_values(area1, area2, "равна")
+    perimeter_comparison = compare_values(perimeter1, perimeter2, "равен")
     
     print(f"{shape1} vs {shape2}:")
     print(f"  Площадь: {area_comparison} ({area1:.1f} vs {area2:.1f})")

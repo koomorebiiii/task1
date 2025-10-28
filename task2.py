@@ -1,4 +1,6 @@
-def apply_filter(predicate, items):
+from typing import Callable, List, Optional, Any
+
+def apply_filter(predicate: Callable[[Any], bool], items: Optional[List[Any]]) -> List[Any]:
     if items is None:
         return []
     

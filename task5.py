@@ -30,7 +30,7 @@ def sum_numbers(a: int, b: int) -> int:
 def process_file(
     input_file: str = "input.txt", 
     output_file: str = "output.txt",
-    numbers_required: int = 2 ) -> None:
+    numbers_required: int = 2) -> None:
     try:
         # Чтение
         numbers = read_numbers_from_file(input_file)

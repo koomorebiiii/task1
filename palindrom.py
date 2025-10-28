@@ -1,4 +1,4 @@
-def is_palindrome(string_to_check):
+def is_palindrome(string_to_check: str) -> bool:
     cleaned_string = ''.join(char.lower() for char in string_to_check if char.isalnum())
     left_index = 0
     right_index = len(cleaned_string) - 1

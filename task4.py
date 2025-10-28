@@ -87,7 +87,7 @@ class GraduateStudent(BaseStudent):
 
 def main():
     # Демонстрация работы
-    graduate = GraduateStudent("Иван", "Петров", 25, "5132704/100001", 4.86 , "Исследование алгоритмов")
+    graduate = GraduateStudent("Иван", "Петров", 25, "5132704/100001", 4.86, "Исследование алгоритмов")
     student = Student("Мария", "Мащалкина", 19, "5132704/30801", 4.71)
     
     people = [student, graduate]
